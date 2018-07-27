@@ -18,11 +18,11 @@ Podemos ver que esta seqüência (iniciando em 13 e terminando em 1) contém 10 
 Desenvolva um programa que descubra qual o número inicial entre 1 e 1 milhão que produz a maior seqüência.
 """
 
+
 def check_collatz(number):
     if number % 2 != 0:
         return (number * 3) + 1
-    elif number % 2 == 0:
-        return number // 2
+    return number // 2
 
 
 def collatz_sequence(number):
