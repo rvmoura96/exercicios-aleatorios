@@ -16,7 +16,6 @@ def contagem_caracteres(palavra: str) -> dict:
     >>> contagem_caracteres('ovo')
     {'o': 2, 'v': 1}
     """
-    contador = 1
     caracteres_ordenados = sorted(palavra)
     caracter_anterior = caracteres_ordenados[0]
     retorno = dict()
@@ -25,7 +24,6 @@ def contagem_caracteres(palavra: str) -> dict:
         if caracter != caracter_anterior:
             retorno[caracter_anterior] = retorno.get(caracter_anterior, 0) + 1
             caracter_anterior = caracter
-            contador = 1
         else:
             retorno[caracter_anterior] = retorno.get(caracter_anterior, 0) + 1
 
